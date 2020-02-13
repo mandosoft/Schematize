@@ -5,7 +5,7 @@ RootStore = types
     .model({
         useVerticalCompression: false,
         beginBin: 20,
-        endBin: 40,
+        endBin: 60,
         pixelsPerColumn: 6,
         pixelsPerRow: 4,
         pixelsBetween: 5,
