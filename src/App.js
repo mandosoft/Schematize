@@ -10,6 +10,7 @@ import {calculateLinkCoordinates} from "./LinkRecord";
 import NucleotideTooltip from "./NucleotideTooltip";
 import ControlHeader from "./ControlHeader";
 import {observe} from "mobx";
+import CompressedViewSwitch from "./CompressedViewSwitch";
 
 function stringToColor(linkColumn, highlightedLinkColumn) {
     let colorKey = (linkColumn.downstream + 1) * (linkColumn.upstream + 1);
@@ -79,7 +80,8 @@ class App extends Component {
         let actualWidth = columnsInComponents * this.props.store.pixelsPerColumn +
             paddingBetweenComponents;
         this.setState({
-            actualWidth: actualWidth
+            actualWidth: actualWidth,
+            uVC: false,
         });
         let [links, top] =
             calculateLinkCoordinates(this.schematic.components, this.props.store.pixelsPerColumn, this.props.store.topOffset,
