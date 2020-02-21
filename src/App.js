@@ -10,7 +10,6 @@ import {calculateLinkCoordinates} from "./LinkRecord";
 import NucleotideTooltip from "./NucleotideTooltip";
 import ControlHeader from "./ControlHeader";
 import {observe} from "mobx";
-import CompressedViewSwitch from "./CompressedViewSwitch";
 
 function stringToColor(linkColumn, highlightedLinkColumn) {
     let colorKey = (linkColumn.downstream + 1) * (linkColumn.upstream + 1);
