@@ -20,7 +20,8 @@ class PangenomeSchematic extends React.Component {
     //TODO: replace jsonCache with browser indexdb
     this.jsonCache = {}; // URL keys, values are entire JSON file datas
     this.chunksProcessed = []; //list of URLs now in this.components
-
+    this.endPoint =
+      "https://collections.lugli.arvadosapi.com/c=203f4c2c756c1f1197207dd78e852fa1-1146978/_/";
     // Added nucleotides attribute and its edges
     this.nucleotides = [];
 
@@ -94,12 +95,7 @@ class PangenomeSchematic extends React.Component {
 
     //will trigger chunk update in App.fetchAllChunks() which calls this.loadJsonCache
     let URLprefix =
-      process.env.PUBLIC_URL +
-      "test_data/" +
-      this.props.store.jsonName +
-      "/" +
-      selZoomLev +
-      "/";
+      this.endPoint + this.props.store.jsonName + "/" + selZoomLev + "/";
     let fileArray = range(beginIndex, endIndex).map((index) => {
       return (
         URLprefix +
@@ -127,8 +123,7 @@ class PangenomeSchematic extends React.Component {
   }
 
   loadIndexFile(jsonFilename) {
-    let indexPath =
-      process.env.PUBLIC_URL + "test_data/" + jsonFilename + "/bin2file.json";
+    let indexPath = this.endPoint + jsonFilename + "/bin2file.json";
     console.log("Reading", indexPath);
     return fetch(indexPath)
       .then((res) => res.json())
@@ -145,7 +140,7 @@ class PangenomeSchematic extends React.Component {
         "No filepath given. Ensure chunknames in bin2file.json are correct."
       );
     console.log("Fetching", filepath);
-    return fetch(process.env.PUBLIC_URL + filepath).then((res) => res.json());
+    return fetch(this.endPoint + filepath).then((res) => res.json());
   }
 
   loadJsonCache(url, data) {

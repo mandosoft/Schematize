@@ -1,5 +1,6 @@
 import { types } from "mobx-state-tree";
 import { urlExists } from "./URL";
+import PangenomeSchematic from "./PangenomeSchematic";
 
 const BeginEndBin = types.optional(types.array(types.integer), [1, 140]);
 
@@ -29,7 +30,7 @@ RootStore = types
     cellToolTipContent: "",
 
     // TO_DO: to change 'jsonName' in 'jsonNameDir'?
-    jsonName: "run1.B1phi1.i1.seqwish",
+    jsonName: "results",
 
     // Added attributes for the zoom level management
     availableZoomLevels: types.optional(types.array(types.string), ["1"]),
@@ -110,8 +111,7 @@ RootStore = types
 
     function tryJSONpath(event) {
       const url =
-        process.env.PUBLIC_URL +
-        "test_data/" +
+        "https://collections.lugli.arvadosapi.com/c=203f4c2c756c1f1197207dd78e852fa1-1146978/_/" +
         event.target.value +
         "/bin2file.json";
       if (urlExists(url)) {
