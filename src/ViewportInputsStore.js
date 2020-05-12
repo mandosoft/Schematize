@@ -29,7 +29,7 @@ RootStore = types
     cellToolTipContent: "",
 
     // TO_DO: to change 'jsonName' in 'jsonNameDir'?
-    jsonName: "run1.B1phi1.i1.seqwish",
+    jsonName: "SARS-CoV-2.genbank.20200329.complete",
 
     // Added attributes for the zoom level management
     availableZoomLevels: types.optional(types.array(types.string), ["1"]),

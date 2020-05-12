@@ -1,5 +1,6 @@
 {
   "name": "schematize",
+  "homepage": "http://mandosoft.github.io/Schematize",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -42,6 +45,7 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2"
