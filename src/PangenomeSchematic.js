@@ -140,7 +140,7 @@ class PangenomeSchematic extends React.Component {
         "No filepath given. Ensure chunknames in bin2file.json are correct."
       );
     console.log("Fetching", filepath);
-    return fetch(this.endPoint + filepath).then((res) => res.json());
+    return fetch(filepath).then((res) => res.json());
   }
 
   loadJsonCache(url, data) {
