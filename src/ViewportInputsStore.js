@@ -1,7 +1,7 @@
 import { types } from "mobx-state-tree";
 import { urlExists } from "./URL";
 
-const BeginEndBin = types.optional(types.array(types.integer), [1, 140]);
+const BeginEndBin = types.optional(types.array(types.integer), [1, 60]);
 
 const ChunkURLs = types.optional(types.array(types.string), [""]);
 const ChunkFastaURLs = types.optional(types.array(types.string), [""]);
