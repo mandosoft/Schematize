@@ -1,0 +1,11 @@
+[12/05/2020 13:03:12 - INFO - __main__ - 389] reading data/SARS-CoV-2.genbank.20200329.complete.w256.json...
+
+[12/05/2020 13:03:12 - INFO - __main__ - 96] Starting Segmentation process on 169 Paths.
+[12/05/2020 13:03:12 - INFO - __main__ - 251] Largest bin_id was 122; Found 75 dividers.
+[12/05/2020 13:03:12 - INFO - __main__ - 258] Input has 6559 listed Links.  Segmentation eliminated 5.153224576917214% of them.
+[12/05/2020 13:03:12 - INFO - __main__ - 260] Found 6219 unique links
+[12/05/2020 13:03:12 - INFO - __main__ - 103] Created dividers
+[12/05/2020 13:03:12 - INFO - __main__ - 116] Created 75 components
+[12/05/2020 13:03:12 - INFO - __main__ - 91] Populated Matrix and Occupancy per component per path.
+[12/05/2020 13:03:12 - INFO - __main__ - 120] populated matrix
+[12/05/2020 13:03:12 - INFO - __main__ - 150] Created 112 LinkColumns
