@@ -21,6 +21,8 @@ class PangenomeSchematic extends React.Component {
     this.jsonCache = {}; // URL keys, values are entire JSON file datas
     this.chunksProcessed = []; //list of URLs now in this.components
 
+    console.log(process.env.PUBLIC_URL);
+
     // Added nucleotides attribute and its edges
     this.nucleotides = [];
 
